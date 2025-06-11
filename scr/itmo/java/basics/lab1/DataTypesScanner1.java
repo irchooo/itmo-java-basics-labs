@@ -4,25 +4,19 @@ import java.util.Scanner;
 
 public class DataTypesScanner1 {
     public static void main(String[] args) {
-        readAndPrintIntegers();
+        System.out.println(readAndPrintIntegers());
     }
 
-    public static void readAndPrintIntegers() {
+    public static String readAndPrintIntegers() {
         System.out.println("Задача 5: ");
-        System.out.println("Пожалуйста, введите целые числа (для выхода введите 'exit'): ");
+        System.out.println("Пожалуйста, введите через пробел три целые числа: ");
         Scanner scanner = new Scanner(System.in);
 
-        while (true) {
-            if (scanner.hasNextInt()) {
-                int number = scanner.nextInt();
-                System.out.println(number);
-            } else if (scanner.hasNext("exit")) {
-                System.out.println("Пока!");
-                break;
-            } else {
-                System.out.println("Пожалуйста, введите целые числа или 'exit' для выхода :)");
-                scanner.next();
-            }
-        }
+        int number1 = scanner.nextInt();
+        int number2 = scanner.nextInt();
+        int number3 = scanner.nextInt();
+
+        return (number1 + "\n" +number2 + "\n" +number3);
     }
 }
+
