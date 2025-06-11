@@ -27,9 +27,10 @@ public class DataTypes {
         return 29 * 4 * (-15);
     }
 
-    public static int calculateExpression3() {
+    public static double calculateExpression3() {
         int number = 10500;
-        return (number / 10) / 10;
+        double result = (number / 10.0) / 10;
+        return result;
     }
 
     public static double calculateExpression4() {
