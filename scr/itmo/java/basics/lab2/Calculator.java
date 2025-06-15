@@ -36,17 +36,17 @@ public class Calculator {
     }
 
     //division methods
-    public static int calcDiv(int number1, int number2) {
+    public static double calcDiv(int number1, int number2) {
         if (number2 != 0) {
-            return number1 / number2;
+            return (double)number1 / number2;
         } else {
             System.out.println("Ошибка - деление на ноль");
             return 0;
         }
     }
-    public static long calcDiv(long number1, long number2) {
+    public static double calcDiv(long number1, long number2) {
         if (number2 != 0) {
-            return number1 / number2;
+            return (double)number1 / number2;
         } else {
             System.out.println("Ошибка - деление на ноль");
             return 0;
