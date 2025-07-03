@@ -22,9 +22,13 @@ public class Strings {
         System.out.println();
         //3
         System.out.println("--> Задача 3 <--");
-        System.out.println("Введите текст с 'бякой': ");
+        System.out.println("Введите текст: ");
         String userInput3 = readInput();
-        System.out.println(replaceByaka(userInput3));
+        System.out.println("Введите слово, которое нужно заменить: ");
+        String userTarget = readInput();
+        System.out.println("Введите на что нужно заменить это слово: ");
+        String userReplacement = readInput();
+        System.out.println(replaceByaka(userInput3, userTarget, userReplacement));
         System.out.println();
         //4
         System.out.println("--> Задача 4 <--");
@@ -47,7 +51,7 @@ public class Strings {
         String input = scanner.nextLine();
 
         if (input == null || input.trim().isEmpty()) {
-            input = "Введенная строка была пустой, поэтому будет обрабатываться эта!";
+            input = null;
         }
         System.out.println("Вы ввели: " + input);
         return input;
@@ -101,11 +105,11 @@ public class Strings {
         }
     }
 
-    public static String replaceByaka(String text) {
-        if (text.contains("бяка")) {
-            return text.replaceAll("бяка", "[вырезано цензурой]");
+    public static String replaceByaka(String text, String target, String replacement) {
+        if (text.contains(target)) {
+            return text.replaceAll(target, replacement);
         } else {
-            return "Ваш текст не содержит слов, которые должны быть 'зацензурены'!";
+            return text;
         }
     }
 
