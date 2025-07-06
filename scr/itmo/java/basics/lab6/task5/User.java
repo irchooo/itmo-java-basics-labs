@@ -17,7 +17,7 @@ public class User {
         }
     }
 
-    public int getAge() {
-        return this.age;
+    public void printAge() {
+        System.out.println("Возраст пользователя: " + this.age);
     }
 }

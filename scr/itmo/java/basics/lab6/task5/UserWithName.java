@@ -11,9 +11,7 @@ public class UserWithName extends User{
     }
 
     @Override
-    public int getAge() {
-        int age = super.getAge();
+    public void printAge() {
         System.out.println("Возраст пользователя " + this.name + ": " + age);
-        return age;
     }
 }
