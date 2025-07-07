@@ -1,3 +1,4 @@
+
 package itmo.java.basics.lab6.task5;
 
 public class Main {
