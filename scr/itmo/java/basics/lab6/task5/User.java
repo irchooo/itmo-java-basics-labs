@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class User {
     protected Scanner scanner;
     protected int age;
+    protected String name;
 
     public User() {
         scanner = new Scanner(System.in);
@@ -15,9 +16,12 @@ public class User {
         } else {
             this.age = 0;
         }
+        scanner.nextLine();
+        System.out.println("Введите имя пользователя: ");
+        this.name = scanner.nextLine();
     }
 
     public void printAge() {
-        System.out.println("Возраст пользователя: " + this.age);
+        System.out.println("Имя пользователя: " + this.name);
     }
 }
