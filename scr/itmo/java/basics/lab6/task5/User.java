@@ -21,7 +21,8 @@ public class User {
         this.name = scanner.nextLine();
     }
 
-    public void printAge() {
+    public void printInfo() {
         System.out.println("Имя пользователя: " + this.name);
+        System.out.println();
     }
 }
